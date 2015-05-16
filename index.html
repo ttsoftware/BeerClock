@@ -5,31 +5,51 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 		<script src="node_modules/flipclock/compiled/flipclock.js"></script>
+		<style type="text/css">
+				#counter {
+						position:fixed;
+						top: 40%;
+						left: 50%;
+						width:auto;
+						height:50em;
+						margin-left: -310px;
+				}
+
+				h1 {
+					position:fixed;
+					left: 36%;
+					top: 25%;
+					font-weight: bold;
+					font-size: 55px;
+				}
+		</style>
 	</head>
+
 	<body>
-	<div class="clock" style="margin:2em;"></div>
-	<div class="message"></div>
-	<script type="text/javascript">
-		var clock;
-
-		$(document).ready(function() {
-
-			var beerDate  = new Date("May 15, 2015 15:30:00");
-			var now   = new Date();
-			var diff  = beerDate.getTime()/1000 - now.getTime()/1000;
-
-
-			clock = $('.clock').FlipClock(diff, {
-		        clockFace: 'DailyCounter',
-		        countdown: true,
-		        callbacks: {
-		        	stop: function() {
-		        		$('.message').html('The clock has stopped!');
-		        	}
-		        }
-		    });
-
-		});
-	</script>
+		<div >
+			<h1>Beer Clock v0.1</h1>
+		</div>
+		<div id="counter" class="clock">
+			<script type="text/javascript">
+				var clock;
+				$(document).ready(function() {
+					var beerDate  = new Date("May 22, 2015 15:30:00");
+					var now   = new Date();
+					var diff  = beerDate.getTime()/1000 - now.getTime()/1000;
+					clock = $('.clock').FlipClock(diff, {
+				        clockFace: 'DailyCounter',
+				        countdown: true,
+				        callbacks: {
+				        	stop: function() {
+										beerDate.setDate(beerDate.getDate() + 7);
+										clock.setTime(beerDate);
+										clock.start();
+				        	}
+				        }
+				    });
+						beerDate
+				});
+			</script>
+		</div>
 	</body>
 </html>
