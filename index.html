@@ -20,7 +20,7 @@
 			<script type="text/javascript">
 				var clock;
 				$(document).ready(function() {
-					var beerDate  = new Date("May 22, 2015 15:30:00");
+					var beerDate  = new Date("May 22, 2015 15:30:00 +0200");
 					var now   = new Date();
 					var diff  = beerDate.getTime()/1000 - now.getTime()/1000;
 					clock = $('.clock').FlipClock(diff, {
