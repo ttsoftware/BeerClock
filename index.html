@@ -10,25 +10,12 @@
 						position:fixed;
 						top: 40%;
 						left: 50%;
-						width:auto;
-						height:50em;
 						margin-left: -310px;
-				}
-
-				h1 {
-					position:fixed;
-					left: 36%;
-					top: 25%;
-					font-weight: bold;
-					font-size: 55px;
 				}
 		</style>
 	</head>
 
 	<body>
-		<div >
-			<h1>Beer Clock v0.1</h1>
-		</div>
 		<div id="counter" class="clock">
 			<script type="text/javascript">
 				var clock;
@@ -37,13 +24,11 @@
 					var now   = new Date();
 					var diff  = beerDate.getTime()/1000 - now.getTime()/1000;
 					clock = $('.clock').FlipClock(diff, {
-				        clockFace: 'DailyCounter',
+				        clockFace: 'HourCounter',
 				        countdown: true,
 				        callbacks: {
 				        	stop: function() {
-										beerDate.setDate(beerDate.getDate() + 7);
-										clock.setTime(beerDate);
-										clock.start();
+
 				        	}
 				        }
 				    });
