@@ -3,6 +3,7 @@
 		<link rel="stylesheet" href="node_modules/flipclock/compiled/flipclock.css">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="BeerDate.js"></script>
 
 		<script src="node_modules/flipclock/compiled/flipclock.js"></script>
 		<style type="text/css">
@@ -20,19 +21,16 @@
 			<script type="text/javascript">
 				var clock;
 				$(document).ready(function() {
-					var beerDate  = new Date("May 22, 2015 15:30:00 +0200");
-					var now   = new Date();
-					var diff  = beerDate.getTime()/1000 - now.getTime()/1000;
-					clock = $('.clock').FlipClock(diff, {
-				        clockFace: 'MinuteCounter',
+					clock = $('.clock').FlipClock(timeForBeer(), {
+				        clockFace: 'DailyCounter',
 				        countdown: true,
 				        callbacks: {
 				        	stop: function() {
-
+										clock.setTime(timeForBeer());
+										clock.start();
 				        	}
 				        }
 				    });
-						beerDate
 				});
 			</script>
 		</div>
