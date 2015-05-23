@@ -35,3 +35,16 @@ function timeForBeer(){
 
   return diff;
 }
+
+$(document).ready(function() {
+  clock = $('.clock').FlipClock(timeForBeer(), {
+        clockFace: 'DailyCounter',
+        countdown: true,
+        callbacks: {
+          stop: function() {
+            clock.setTime(timeForBeer());
+            clock.start();
+          }
+        }
+    });
+});

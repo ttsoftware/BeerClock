@@ -1,0 +1,14 @@
+.beerClock {
+  display: inline-block;
+  width: auto;
+}
+.center {
+  position:fixed;
+  text-align: center;
+  top: 40%;
+  left: 28%;
+}
+.clock-size{
+  zoom: 0.5;
+  -moz-transform: scale(0.5)
+}

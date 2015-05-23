@@ -1,38 +1,19 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="node_modules/flipclock/compiled/flipclock.css">
+		<link rel="stylesheet" type="text/css" href="clock.css">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="BeerDate.js"></script>
-
+		<script type="text/javascript" src="clock.js"></script>
 		<script src="node_modules/flipclock/compiled/flipclock.js"></script>
-		<style type="text/css">
-				#counter {
-						position:fixed;
-						top: 40%;
-						left: 60%;
-						margin-left: -310px;
-				}
-		</style>
+
 	</head>
 
 	<body>
-		<div id="counter" class="clock">
-			<script type="text/javascript">
-				var clock;
-				$(document).ready(function() {
-					clock = $('.clock').FlipClock(timeForBeer(), {
-				        clockFace: 'DailyCounter',
-				        countdown: true,
-				        callbacks: {
-				        	stop: function() {
-										clock.setTime(timeForBeer());
-										clock.start();
-				        	}
-				        }
-				    });
-				});
-			</script>
+
+		<div class="center">
+    	<div class="clock beerClock"></div>
 		</div>
+
 	</body>
 </html>
