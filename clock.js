@@ -21,7 +21,7 @@ function timeForBeer(){
       beerDate.setDate(today.getDate()+1);
       break;
     case 5:
-      beerDate.setDate(today.getDate()+0);
+      beerDate.setDate(today.getDate()+7);
       break;
     case 6:
       beerDate.setDate(today.getDate()+6);
@@ -32,7 +32,6 @@ function timeForBeer(){
   beerDate.setSeconds(0);
 
   var diff  = beerDate.getTime()/1000 - today.getTime()/1000;
-
   return diff;
 }
 
