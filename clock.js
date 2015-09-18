@@ -43,6 +43,8 @@ $(document).ready(function() {
         countdown: true,
         callbacks: {
           stop: function() {
+            var audio = new Audio('cheers.mp3');
+            audio.play();
             clock.setTime(timeForBeer());
             clock.start();
           }
