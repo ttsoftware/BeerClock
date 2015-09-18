@@ -1,5 +1,6 @@
 function timeForBeer(){
 
+console.log("test");
   var today = new Date();
   var beerDate = new Date();
   var n = beerDate.getDay();
