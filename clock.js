@@ -21,7 +21,7 @@ function timeForBeer(){
       beerDate.setDate(today.getDate()+1);
       break;
     case 5:
-      if(beerDate.getHours() >= 13 && beerDate.getMinutes() >= 30){
+      if(beerDate.getHours() >= 15 && beerDate.getMinutes() >= 30){
         beerDate.setDate(today.getDate()+7);
       }
       break;
@@ -29,7 +29,7 @@ function timeForBeer(){
       beerDate.setDate(today.getDate()+6);
       break;
   }
-  beerDate.setHours(13);
+  beerDate.setHours(15);
   beerDate.setMinutes(30);
   beerDate.setSeconds(0);
 
