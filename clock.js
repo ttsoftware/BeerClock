@@ -36,7 +36,8 @@ function timeForBeer(){
   var diff  = beerDate.getTime()/1000 - today.getTime()/1000;
   return diff;
 }
-
+var audio = new Audio('cheers.mp3');
+audio.play();
 $(document).ready(function() {
   clock = $('.clock').FlipClock(timeForBeer(), {
         clockFace: 'DailyCounter',
