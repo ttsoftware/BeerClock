@@ -29,7 +29,7 @@ function timeForBeer(){
       beerDate.setDate(today.getDate()+6);
       break;
   }
-  beerDate.setHours(15);
+  beerDate.setHours(13);
   beerDate.setMinutes(30);
   beerDate.setSeconds(0);
 
