@@ -2,6 +2,9 @@
   display: inline-block;
   width: auto;
 }
+.container {
+  background-image:url(beer.gif);
+}
 .center {
   position:fixed;
   text-align: center;
