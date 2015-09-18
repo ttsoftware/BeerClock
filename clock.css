@@ -9,6 +9,6 @@
   left: 25%;
 }
 .clock-size{
-  zoom: 0.05;
-  -moz-transform: scale(0.05)
+  zoom: 0.01;
+  -moz-transform: scale(0.01)
 }
