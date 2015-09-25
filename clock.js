@@ -30,7 +30,7 @@ console.log("test");
       beerDate.setDate(today.getDate()+6);
       break;
   }
-  beerDate.setHours(13);
+  beerDate.setHours(15);
   beerDate.setMinutes(0);
   beerDate.setSeconds(0);
 
