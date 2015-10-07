@@ -1,6 +1,5 @@
 function timeForBeer(){
 
-console.log("test");
   var today = new Date();
   var beerDate = new Date();
   var n = beerDate.getDay();
@@ -20,6 +19,8 @@ console.log("test");
       break;
     case 4:
       beerDate.setDate(today.getDate()+1);
+      var audio = new Audio('imorgen.mp3');
+      audio.play();
       break;
     case 5:
       if(beerDate.getHours() >= 15 && beerDate.getMinutes() >= 0){
@@ -44,7 +45,7 @@ $(document).ready(function() {
         countdown: true,
         callbacks: {
           stop: function() {
-            var audio = new Audio('friday.mp3');
+            var audio = new Audio('stik.mp3');
             audio.play();
             clock.setTime(timeForBeer());
             clock.start();
