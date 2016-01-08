@@ -45,7 +45,7 @@ $(document).ready(function() {
         countdown: true,
         callbacks: {
           stop: function() {
-            var audio = new Audio('bedstefar.mp3');
+            var audio = new Audio('stik.mp3');
             audio.play();
             clock.setTime(timeForBeer());
             clock.start();
