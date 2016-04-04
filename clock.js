@@ -47,8 +47,10 @@ $(document).ready(function() {
           stop: function() {
             var audio = new Audio('stik.mp3');
             audio.play();
-            clock.setTime(timeForBeer());
-            clock.start();
+            setTimeout(function(){
+              clock.setTime(timeForBeer());
+              clock.start();
+            }, 32400000);
           }
         }
     });
