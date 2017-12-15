@@ -1,6 +1,7 @@
 .beerClock {
   display: inline-block;
   width: auto;
+  margin-top: 90px;
 }
 .container {
   background-image:url(beer.gif);
