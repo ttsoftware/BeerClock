@@ -11,14 +11,8 @@
 .center {
   position:fixed;
   text-align: center;
-  top: 50%;
+  top: 25%;
   left: 25%;
-}
-.centerTwitter{
-  position:fixed;
-  top: 2%;
-  left:	28%;
-  width: 100%;
 }
 .clock-size{
 }
